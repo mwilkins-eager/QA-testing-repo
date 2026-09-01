@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tienda - QA Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>QA Playground - Tienda</h1>
+    <div class="nav">
+      <span id="user-name"></span>
+      <a href="#" id="logout" class="btn btn-small">Cerrar sesión</a>
+      <a href="cart.html" class="btn btn-small">🛒 Carrito (<span id="cart-count">0</span>)</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Productos</h2>
+    <div id="products" class="products"></div>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="store.js"></script>
+  <script src="home.js"></script>
+</body>
+</html>

@@ -6,6 +6,15 @@ Repositorio dedicado a pruebas de QA (Quality Assurance). Contiene casos de prue
 
 ```
 QA-testing-repo/
+├── app/                # Aplicación de ejemplo (ecommerce simple)
+│   ├── login.html      # Página de login
+│   ├── index.html      # Homepage con catálogo de productos
+│   ├── cart.html       # Carrito de compras
+│   ├── styles.css      # Estilos
+│   ├── store.js        # Datos de productos y lógica del carrito
+│   ├── auth.js         # Autenticación (sessionStorage)
+│   ├── home.js         # Lógica del homepage
+│   └── cart.js         # Lógica del carrito
 ├── tests/
 │   ├── e2e/            # Pruebas end-to-end
 │   ├── integration/    # Pruebas de integración
@@ -19,6 +28,35 @@ QA-testing-repo/
 ├── data/               # Datos de prueba (fixtures, mocks)
 └── scripts/           # Scripts de automatización
 ```
+
+## Aplicación de ejemplo
+
+El repositorio incluye un ecommerce simple (`app/`) que sirve como objetivo para las pruebas de QA. Es una app estática (HTML + JS vanilla) sin dependencias.
+
+### Características
+
+- **Login** (`login.html`): autenticación simulada con sesión en `sessionStorage`.
+- **Homepage** (`index.html`): catálogo de 6 productos con botón "Agregar al carrito".
+- **Carrito** (`cart.html`): ver items, total, finalizar compra y vaciar carrito (persiste en `localStorage`).
+
+### Credenciales de prueba
+
+- **Usuario:** `test@example.com`
+- **Contraseña:** `1234`
+
+### Cómo ejecutarla
+
+Como es estática, puedes abrirla directamente con cualquier servidor estático:
+
+```bash
+# Opción 1: Python
+python3 -m http.server 8000 --directory app
+
+# Opción 2: npx
+npx serve app
+```
+
+Luego abrir http://localhost:8000 (redirige al login).
 
 ## Requisitos
 

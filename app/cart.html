@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito - QA Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>QA Playground - Carrito</h1>
+    <div class="nav">
+      <a href="index.html" class="btn btn-small">← Volver</a>
+      <a href="#" id="logout" class="btn btn-small">Cerrar sesión</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Tu carrito</h2>
+    <div id="cart-items"></div>
+
+    <div id="cart-summary" class="card" hidden>
+      <div class="cart-total">Total: <strong>$<span id="cart-total">0</span></strong></div>
+      <button id="checkout-btn" class="btn">Finalizar compra</button>
+      <p id="checkout-msg" class="success" hidden>¡Compra realizada con éxito! 🎉</p>
+      <button id="clear-btn" class="btn btn-secondary">Vaciar carrito</button>
+    </div>
+
+    <p id="empty-msg" class="hint">Tu carrito está vacío. <a href="index.html">Ver productos</a></p>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="store.js"></script>
+  <script src="cart.js"></script>
+</body>
+</html>
