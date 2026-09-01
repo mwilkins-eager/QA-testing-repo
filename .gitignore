@@ -1,0 +1,34 @@
+# Dependencias
+node_modules/
+package-lock.json
+yarn.lock
+
+# Reportes y resultados de pruebas
+coverage/
+.nyc_output/
+test-results/
+junit.xml
+mochawesome-reports/
+
+# Logs
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Variables de entorno
+.env
+.env.local
+.env.*.local
+
+# Configuraciones de editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Datos de prueba sensibles
+data/sensitive/
