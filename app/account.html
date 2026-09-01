@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi cuenta - QA Playground</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>QA Playground - Mi cuenta</h1>
+    <div class="nav">
+      <a href="index.html" class="btn btn-small">← Tienda</a>
+      <a href="#" id="logout" class="btn btn-small">Cerrar sesión</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Datos de la cuenta</h2>
+
+    <form id="account-form" class="card">
+      <div class="form-group">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Correo electrónico</label>
+        <input type="email" id="email" name="email" disabled>
+        <small class="hint">El correo no se puede modificar.</small>
+      </div>
+
+      <p id="account-success" class="success" hidden>Datos actualizados correctamente. ✓</p>
+
+      <button type="submit" class="btn">Guardar cambios</button>
+    </form>
+
+    <h2>Cambiar contraseña</h2>
+    <form id="password-form" class="card">
+      <div class="form-group">
+        <label for="current-password">Contraseña actual</label>
+        <input type="password" id="current-password" name="current-password" required>
+      </div>
+
+      <div class="form-group">
+        <label for="new-password">Nueva contraseña</label>
+        <input type="password" id="new-password" name="new-password" required minlength="4">
+      </div>
+
+      <div class="form-group">
+        <label for="confirm-password">Confirmar nueva contraseña</label>
+        <input type="password" id="confirm-password" name="confirm-password" required>
+      </div>
+
+      <p id="password-error" class="error" hidden></p>
+      <p id="password-success" class="success" hidden>Contraseña actualizada correctamente. ✓</p>
+
+      <button type="submit" class="btn">Actualizar contraseña</button>
+    </form>
+  </main>
+
+  <script src="auth.js"></script>
+  <script src="account.js"></script>
+</body>
+</html>
